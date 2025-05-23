@@ -31,8 +31,10 @@ listener.start()
 listener.join()
 ```
 
-Once I was done with it, I ran this code to see if it works. And as you can see it works as expected, but the words are all mashed together, no space or enters.
-
+Once I was done with it, I ran this code to see if it works. And as you can see it works as expected, but the words are all mashed together, no space or enters.\
+\
+![](images/test_keylogger.png)\
+\
 Here's the updated code for it:
 
 ```python
@@ -57,8 +59,10 @@ listener.start()
 listener.join()
 ```
 
-Then I ran the updated code again and it works perfectly as it has to, as you can see in the screenshot.
-
+Then I ran the updated code again and it works perfectly as it has to, as you can see in the screenshot.\
+\
+![](images/final_keylogger.png)\
+\
 That was Phase 1 of my Project. Now onto Phase 2.
 
 ## Phase 2 : Keylogging on another system and sending it back to the Kali VM
@@ -146,8 +150,10 @@ with keyboard.Listener(on_press=on_press) as listener:
 send_log()
 ```
 
-Now I will first run the code on the receiver side and then the sender's side.
-
+Now I will first run the code on the receiver side and then the sender's side.\
+\
+![](images/send_recieve.png)\
+\
 As we can see it works perfectly.
 
 ## Conclusion:
